@@ -7,15 +7,22 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <h1>Hello World 🌎🌎🌎 Ionic!!!</h1>
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-slides pager="true" [options]="slideOpt">
+    <ion-slide>
+      <ion-icon name="close"></ion-icon>
+      <img src="assets/img/logo.png" alt="Platzi Music" />
+      <h1>Escucha tu muscia</h1>
+      <h2>EN CUALQUIER LUGAR</h2>
+      <p>
+        Los mejores albunes, las mejores canciones. Escucha y compart en cualquier momento, a todas horas.
+      </p>
+      <ion-icon name="play"></ion-icon>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 2</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 3</h1>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

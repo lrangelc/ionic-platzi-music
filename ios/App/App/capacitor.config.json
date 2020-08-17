@@ -1,0 +1,13 @@
+{
+  "appId": "com.luisrangelc.platzimusic",
+  "appName": "platzi-music",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

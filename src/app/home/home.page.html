@@ -8,21 +8,15 @@
 
 <ion-content [fullscreen]="true">
   <ion-slides pager="true" [options]="slideOpt">
-    <ion-slide>
+    <ion-slide *ngFor="let slide of slides">
       <ion-icon name="close"></ion-icon>
-      <img src="assets/img/logo.png" alt="Platzi Music" />
-      <h1>Escucha tu muscia</h1>
-      <h2>EN CUALQUIER LUGAR</h2>
+      <img src="assets/img/logo.png" alt="Platzi Music Logo" />
+      <h1>{{slide.title}}</h1>
+      <h2>{{slide.subTitle}}</h2>
       <p>
-        Los mejores albunes, las mejores canciones. Escucha y compart en cualquier momento, a todas horas.
+        {{slide.description}}
       </p>
-      <ion-icon name="play"></ion-icon>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 2</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 3</h1>
+      <ion-icon name="{{slide.icon}}"></ion-icon>
     </ion-slide>
   </ion-slides>
 </ion-content>

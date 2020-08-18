@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
   slideOpt = { initialSlid: 0, slidesPerView: 1, centeredSlides: true, speed: 400 };
+
+  slides = [
+    { title: 'Este es el tituloe', subTitle: 'Este es el subtitulo', description: '', icon: 'play' },
+    { title: '', subTitle: '', description: '', icon: '' },
+    { title: '', subTitle: '', description: '', icon: '' },
+    { title: '', subTitle: '', description: '', icon: '' },
+  ];
   constructor() {}
 }

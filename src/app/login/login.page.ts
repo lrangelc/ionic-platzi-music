@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { NavController } from '@ionic/angular';
+
+import { AuthenticateService } from './../services/authenticate.service';
 
 @Component({
   selector: 'app-login',
@@ -22,17 +25,36 @@ export class LoginPage implements OnInit {
         type: 'minlength',
         message: 'Tamaño minimo 6 caracteres',
       },
+      // {
+      //   type: 'pattern',
+      //   message: 'Tamaño minimo 6 caracteres',
+      // },
     ],
   };
+  errorMessage: string = '';
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private authService: AuthenticateService, private navCtrl: NavController) {
     this.loginForm = this.formBuilder.group({
       email: new FormControl('', Validators.compose([Validators.required, Validators.email])),
-      password: new FormControl('', Validators.compose([Validators.required, Validators.minLength(6)])),
+      password: new FormControl(
+        '',
+        Validators.compose([
+          Validators.required,
+          Validators.minLength(6),
+          // Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})'),
+        ])
+      ),
     });
   }
 
   ngOnInit() {}
 
-  loginUser() {}
+  loginUser() {
+    console.log(this.loginForm.get('email').value);
+    console.log(this.loginForm.get('password').value);
+    this.authService.loginUser(this.loginForm.get('email').value, this.loginForm.get('password').value).then((res) => {
+      this.errorMessage = '';
+      this.navCtrl.navigateForward('/home');
+    });
+  }
 }

@@ -6,13 +6,15 @@ import { Storage } from '@ionic/storage';
 import { AuthenticateService } from './../services/authenticate.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-register',
+  templateUrl: './register.page.html',
+  styleUrls: ['./register.page.scss'],
 })
-export class LoginPage implements OnInit {
-  loginForm: FormGroup;
+export class RegisterPage implements OnInit {
+  registerForm: FormGroup;
   validationMessage = {
+    firstName: [{ type: 'required', message: 'El nombre es requerido' }],
+    lastName: [{ type: 'required', message: 'El apellido es requerido' }],
     email: [
       { type: 'required', message: 'El email es requerido' },
       {
@@ -26,10 +28,6 @@ export class LoginPage implements OnInit {
         type: 'minlength',
         message: 'Tamaño minimo 6 caracteres',
       },
-      // {
-      //   type: 'pattern',
-      //   message: 'Tamaño minimo 6 caracteres',
-      // },
     ],
   };
   errorMessage = '';
@@ -40,26 +38,21 @@ export class LoginPage implements OnInit {
     private navCtrl: NavController,
     private storage: Storage
   ) {
-    this.loginForm = this.formBuilder.group({
+    this.registerForm = this.formBuilder.group({
+      firstName: new FormControl('', Validators.compose([Validators.required])),
+      lastName: new FormControl('', Validators.compose([Validators.required])),
       email: new FormControl('', Validators.compose([Validators.required, Validators.email])),
-      password: new FormControl(
-        '',
-        Validators.compose([
-          Validators.required,
-          Validators.minLength(6),
-          // Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})'),
-        ])
-      ),
+      password: new FormControl('', Validators.compose([Validators.required, Validators.minLength(6)])),
     });
   }
 
   ngOnInit() {}
 
-  loginUser() {
-    console.log(this.loginForm.get('email').value);
-    console.log(this.loginForm.get('password').value);
+  registerUser() {
+    console.log(this.registerForm.get('email').value);
+    console.log(this.registerForm.get('password').value);
     this.authService
-      .loginUser(this.loginForm.get('email').value, this.loginForm.get('password').value)
+      .loginUser(this.registerForm.get('email').value, this.registerForm.get('password').value)
       .then((res) => {
         this.errorMessage = '';
         this.storage.set('isUserLoggedIn', true);
@@ -70,7 +63,7 @@ export class LoginPage implements OnInit {
       });
   }
 
-  goToRegister() {
-    this.navCtrl.navigateForward('/register');
+  goToLogin() {
+    this.navCtrl.navigateForward('/login');
   }
 }

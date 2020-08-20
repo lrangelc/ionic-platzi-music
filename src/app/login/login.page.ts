@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { NavController } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
 
 import { AuthenticateService } from './../services/authenticate.service';
 
@@ -31,9 +32,14 @@ export class LoginPage implements OnInit {
       // },
     ],
   };
-  errorMessage: string = '';
+  errorMessage = '';
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthenticateService, private navCtrl: NavController) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService: AuthenticateService,
+    private navCtrl: NavController,
+    private storage: Storage
+  ) {
     this.loginForm = this.formBuilder.group({
       email: new FormControl('', Validators.compose([Validators.required, Validators.email])),
       password: new FormControl(
@@ -52,9 +58,15 @@ export class LoginPage implements OnInit {
   loginUser() {
     console.log(this.loginForm.get('email').value);
     console.log(this.loginForm.get('password').value);
-    this.authService.loginUser(this.loginForm.get('email').value, this.loginForm.get('password').value).then((res) => {
-      this.errorMessage = '';
-      this.navCtrl.navigateForward('/home');
-    });
+    this.authService
+      .loginUser(this.loginForm.get('email').value, this.loginForm.get('password').value)
+      .then((res) => {
+        this.errorMessage = '';
+        this.storage.set('isUserLoggedIn', true);
+        this.navCtrl.navigateForward('/home');
+      })
+      .catch((err) => {
+        this.errorMessage = err;
+      });
   }
 }

@@ -49,10 +49,17 @@ export class RegisterPage implements OnInit {
   ngOnInit() {}
 
   registerUser() {
+    console.log(this.registerForm.get('firstName').value);
+    console.log(this.registerForm.get('lastName').value);
     console.log(this.registerForm.get('email').value);
     console.log(this.registerForm.get('password').value);
     this.authService
-      .loginUser(this.registerForm.get('email').value, this.registerForm.get('password').value)
+      .registerUser(
+        this.registerForm.get('firstName').value,
+        this.registerForm.get('lastName').value,
+        this.registerForm.get('email').value,
+        this.registerForm.get('password').value
+      )
       .then((res) => {
         this.errorMessage = '';
         this.storage.set('isUserLoggedIn', true);
@@ -64,6 +71,6 @@ export class RegisterPage implements OnInit {
   }
 
   goToLogin() {
-    this.navCtrl.navigateForward('/login');
+    this.navCtrl.navigateBack('/login');
   }
 }

@@ -1,28 +1,45 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons>
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-slides pager="true" [options]="slideOpt">
-    <ion-slide>
-      <ion-icon name="close"></ion-icon>
-      <img src="assets/img/logo.png" alt="Platzi Music" />
-      <h1>Escucha tu muscia</h1>
-      <h2>EN CUALQUIER LUGAR</h2>
-      <p>
-        Los mejores albunes, las mejores canciones. Escucha y compart en cualquier momento, a todas horas.
-      </p>
-      <ion-icon name="play"></ion-icon>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 2</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 3</h1>
-    </ion-slide>
-  </ion-slides>
+<ion-content padding>
+    <h1>Artistas</h1>
+    <ion-slides [options]="slideOps" *ngIf="artists.length">
+        <ion-slide *ngFor="let artist of artists">
+            <ion-avatar>
+                <img src="https://via.placeholder.com/150" alt="">
+                <span>Nombre del artista</span>
+            </ion-avatar>
+        </ion-slide>
+    </ion-slides>
+    <h1>Artistas</h1>
+    <ion-slides [options]="slideOps" *ngIf="artists.length">
+        <ion-slide *ngFor="let artist of artists">
+            <ion-avatar>
+                <img src="https://via.placeholder.com/150" alt="">
+                <span>Nombre del artista</span>
+            </ion-avatar>
+        </ion-slide>
+    </ion-slides>
+    <h1>Artistas</h1>
+    <ion-slides [options]="slideOps" *ngIf="artists.length">
+        <ion-slide *ngFor="let artist of artists">
+            <ion-avatar>
+                <img src="https://via.placeholder.com/150" alt="">
+                <span>Nombre del artista</span>
+            </ion-avatar>
+        </ion-slide>
+    </ion-slides>
+    <h1>Artistas</h1>
+    <ion-slides [options]="slideOps" *ngIf="artists.length">
+        <ion-slide *ngFor="let artist of artists">
+            <ion-avatar>
+                <img src="https://via.placeholder.com/150" alt="">
+                <span>Nombre del artista</span>
+            </ion-avatar>
+        </ion-slide>
+    </ion-slides>
 </ion-content>

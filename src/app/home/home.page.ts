@@ -15,10 +15,13 @@ export class HomePage {
   constructor(private musicService: PlatziMusicService) {}
 
   ionViewDidEnter() {
-    this.musicService.getNewReleases().then((newReleases: any) => {
-      this.artists = newReleases.default.items;
-      this.songs = newReleases.default.items.filter((e) => e.type === 'single');
-      this.albums = newReleases.default.items.filter((e) => e.type === 'album');
+    this.musicService.getArtists().subscribe((data) => {
+      this.artists = data;
+    });
+
+    this.musicService.getNewReleases().subscribe((newReleases) => {
+      this.songs = newReleases.filter((e) => e.type === 'single');
+      this.albums = newReleases.filter((e) => e.type === 'album');
     });
   }
 }

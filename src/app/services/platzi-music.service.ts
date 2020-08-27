@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import * as data from './../../assets/artists.json';
 
 @Injectable({
@@ -7,7 +8,15 @@ import * as data from './../../assets/artists.json';
 export class PlatziMusicService {
   constructor() {}
 
-  getNewReleases() {
+  getNewReleases(): Observable<any> {
+    return of(data.items);
+  }
+
+  getArtists(): Observable<any> {
+    return of(data.items);
+  }
+
+  getNewReleases1() {
     const promise = new Promise(function (resolve, reject) {
       if (data) {
         resolve(data);
@@ -26,7 +35,11 @@ export class PlatziMusicService {
     );
   }
 
-  getNewReleases1() {
+  getArtists2() {
+    return data.items;
+  }
+
+  getNewReleases2() {
     return fetch('https://platzi-music-api.now.sh/browse/new-releases', {
       mode: 'cors',
       headers: { 'Access-Control-Allow-Origin': '*' },

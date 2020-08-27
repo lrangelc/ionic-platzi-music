@@ -13,7 +13,7 @@ export class HomePage {
   artists: any[] = [];
   songs: any[] = [];
   albums: any[] = [];
-  song = null;
+  song = { playing: false };
   slideOps = { initialSlid: 2, slidesPerView: 4, centeredSlides: true, speed: 400 };
 
   constructor(private musicService: PlatziMusicService, private modalController: ModalController) {}
@@ -59,5 +59,13 @@ export class HomePage {
     //   },
     // });
     // modal.present();
+  }
+
+  play() {
+    this.song.playing = true;
+  }
+
+  pause() {
+    this.song.playing = false;
   }
 }

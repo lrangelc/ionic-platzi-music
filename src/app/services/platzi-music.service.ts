@@ -45,4 +45,15 @@ export class PlatziMusicService {
       headers: { 'Access-Control-Allow-Origin': '*' },
     }).then((response) => response.json());
   }
+
+  getArtistTopTracks(artistId): Observable<any> {
+    return of(data.items);
+  }
+
+  getArtistTopTracks1(artistId) {
+    return fetch(`https://platzi-music-api.now.sh/artists/${artistId}/top-tracks?country=CO`, {
+      mode: 'cors',
+      headers: { 'Access-Control-Allow-Origin': '*' },
+    }).then((response) => response.json());
+  }
 }

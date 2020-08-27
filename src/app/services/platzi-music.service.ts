@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import * as data from './../../assets/artists.json';
+import * as dataArtists from './../../assets/artists.json';
+import * as dataTopTracks from './../../assets/topTracks.json';
 
 @Injectable({
   providedIn: 'root',
@@ -9,17 +10,17 @@ export class PlatziMusicService {
   constructor() {}
 
   getNewReleases(): Observable<any> {
-    return of(data.items);
+    return of(dataArtists.items);
   }
 
   getArtists(): Observable<any> {
-    return of(data.items);
+    return of(dataArtists.items);
   }
 
   getNewReleases1() {
     const promise = new Promise(function (resolve, reject) {
-      if (data) {
-        resolve(data);
+      if (dataArtists) {
+        resolve(dataArtists);
       } else {
         reject(Error('It broke'));
       }
@@ -36,7 +37,7 @@ export class PlatziMusicService {
   }
 
   getArtists2() {
-    return data.items;
+    return dataArtists.items;
   }
 
   getNewReleases2() {
@@ -47,7 +48,7 @@ export class PlatziMusicService {
   }
 
   getArtistTopTracks(artistId): Observable<any> {
-    return of(data.items);
+    return of(dataTopTracks.items.filter((e) => e.id === artistId)[0]);
   }
 
   getArtistTopTracks1(artistId) {

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Observable } from 'rxjs';
 import { PlatziMusicService } from '../services/platzi-music.service';
 import { SongsModalPage } from '../songs-modal/songs-modal.page';
 
@@ -28,14 +29,30 @@ export class HomePage {
   }
 
   async showSongs(artist) {
-    const songs = await this.musicService.getArtistTopTracks(artist.id);
-    const modal = await this.modalController.create({
-      component: SongsModalPage,
-      componentProps: {
-        songs: songs.tracks,
-        artist: artist.name,
-      },
+    this.musicService.getArtistTopTracks(artist.id).subscribe(async (data) => {
+      const songs = data;
+      console.log('songs');
+      console.log(songs);
+
+      const modal = await this.modalController.create({
+        component: SongsModalPage,
+        componentProps: {
+          songs: songs.tracks,
+          artist,
+        },
+      });
+      modal.present();
     });
-    modal.present();
+
+    // const songs: Observable<any> = await this.musicService.getArtistTopTracks(artist.id);
+
+    // const modal = await this.modalController.create({
+    //   component: SongsModalPage,
+    //   componentProps: {
+    //     songs: songs.tracks,
+    //     artist,
+    //   },
+    // });
+    // modal.present();
   }
 }

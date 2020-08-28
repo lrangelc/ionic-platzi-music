@@ -3,142 +3,143 @@
     {
       "id": "25z14Qw0e8uN0dIaWVe2Mk",
       "tracks": [
-        { "name": "yeap1", "popularity": 10 },
-        { "name": "yeap2", "popularity": 10 }
+        { "name": "yeap1", "popularity": 10, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+        { "name": "yeap2", "popularity": 10, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" }
       ]
     },
     {
       "id": "05fG473iIaoy82BF1aGhL8",
       "tracks": [
-        { "name": "yeap1", "popularity": 10 },
-        { "name": "yeap2", "popularity": 10 }
+        { "name": "yeap1", "popularity": 10, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
+        { "name": "yeap2", "popularity": 10, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" }
       ]
     },
     {
       "id": "5ZNxiPcbKgaNcBrERMpqeu",
       "tracks": [
-        { "name": "yeap1", "popularity": 10 },
-        { "name": "yeap2", "popularity": 10 }
+        { "name": "yeap1", "popularity": 10, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
+        { "name": "yeap2", "popularity": 10, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" }
       ]
     },
     {
       "id": "1Qp56T7n950O3EGMsSl81D",
       "tracks": [
-        { "name": "yeap1", "popularity": 71 },
-        { "name": "yeap2", "popularity": 71 }
+        { "name": "yeap1", "popularity": 71, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
+        { "name": "yeap2", "popularity": 71, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" }
       ]
     },
     {
       "id": "0Up8AZmXDecXiMirZhRLmw",
       "tracks": [
-        { "name": "yeap1", "popularity": 51 },
-        { "name": "yeap2", "popularity": 51 }
+        { "name": "yeap1", "popularity": 51, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" },
+        { "name": "yeap2", "popularity": 51, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3" }
       ]
     },
     {
       "id": "0yNSzH5nZmHzeE2xn6Xshb",
       "tracks": [
-        { "name": "yeap1", "popularity": 75 },
-        { "name": "yeap2", "popularity": 75 }
+        { "name": "yeap1", "popularity": 75, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3" },
+        { "name": "yeap2", "popularity": 75, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3" }
       ]
     },
     {
       "id": "6wWVKhxIU2cEi0K81v7HvP",
       "tracks": [
-        { "name": "yeap1", "popularity": 85 },
-        { "name": "yeap2", "popularity": 85 }
+        { "name": "yeap1", "popularity": 85, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3" },
+        { "name": "yeap2", "popularity": 85, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-14.mp3" }
       ]
     },
     {
       "id": "5lwmRuXgjX8xIwlnauTZIP",
       "tracks": [
-        { "name": "yeap1", "popularity": 86 },
-        { "name": "yeap2", "popularity": 86 }
+        { "name": "yeap1", "popularity": 86, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.mp3" },
+        { "name": "yeap2", "popularity": 86, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-16.mp3" }
       ]
     },
     {
       "id": "1dfeR4HaWDbWqFHLkxsg1d",
       "tracks": [
-        { "name": "yeap1", "popularity": 92 },
-        { "name": "yeap2", "popularity": 92 }
+        { "name": "yeap1", "popularity": 92, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+        { "name": "yeap2", "popularity": 92, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" }
       ]
     },
     {
       "id": "1r4hJ1h58CWwUQe3MxPuau",
       "tracks": [
-        { "name": "yeap1", "popularity": 93 },
-        { "name": "yeap2", "popularity": 93 }
+        { "name": "yeap1", "popularity": 93, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
+        { "name": "yeap2", "popularity": 93, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" }
       ]
     },
     {
       "id": "4yscD4NQlCKXEpUvBV3nj8",
       "tracks": [
-        { "name": "yeap1", "popularity": 46 },
-        { "name": "yeap2", "popularity": 46 }
+        { "name": "yeap1", "popularity": 46, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
+        { "name": "yeap2", "popularity": 46, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" }
       ]
     },
     {
       "id": "0SfsnGyD8FpIN4U4WCkBZ5",
       "tracks": [
-        { "name": "yeap1", "popularity": 82 },
-        { "name": "yeap2", "popularity": 82 }
+        { "name": "yeap1", "popularity": 82, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
+        { "name": "yeap2", "popularity": 82, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" }
       ]
     },
     {
       "id": "0h1zs4CTlU9D2QtgPxptUD",
       "tracks": [
-        { "name": "yeap1", "popularity": 79 },
-        { "name": "yeap2", "popularity": 79 }
+        { "name": "yeap1", "popularity": 79, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" },
+        { "name": "yeap2", "popularity": 79, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3" }
       ]
     },
     {
       "id": "1i8SpTcr7yvPOmcqrbnVXY",
       "tracks": [
-        { "name": "yeap1", "popularity": 97 },
-        { "name": "yeap2", "popularity": 97 }
+        { "name": "yeap1", "popularity": 97, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3" },
+        { "name": "yeap2", "popularity": 97, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3" }
       ]
     },
     {
       "id": "3PfJE6ebCbCHeuqO4BfNeA",
       "tracks": [
-        { "name": "yeap1", "popularity": 68 },
-        { "name": "yeap2", "popularity": 68 }
+        { "name": "yeap1", "popularity": 68, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3" },
+        { "name": "yeap2", "popularity": 68, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-14.mp3" }
       ]
     },
     {
       "id": "3WrFJ7ztbogyGnTHbHJFl2",
       "tracks": [
-        { "name": "yeap1", "popularity": 90 },
-        { "name": "yeap2", "popularity": 90 }
+        { "name": "yeap1", "popularity": 90, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.mp3" },
+        { "name": "yeap2", "popularity": 90, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-16.mp3" }
       ]
     },
     {
       "id": "003f4bk13c6Q3gAUXv7dGJ",
       "tracks": [
-        { "name": "yeap1", "popularity": 69 },
-        { "name": "yeap2", "popularity": 69 }
+        { "name": "yeap1", "popularity": 69, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+        { "name": "yeap2", "popularity": 69, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" }
       ]
     },
     {
       "id": "4rYCMf7ApPRVG3yjCbxJ8m",
       "tracks": [
-        { "name": "yeap1", "popularity": 28 },
-        { "name": "yeap2", "popularity": 28 }
+        { "name": "yeap1", "popularity": 28, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
+        { "name": "yeap2", "popularity": 28, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" }
       ]
     },
     {
       "id": "02OR1V0L1ODy7dDlBLTOvx",
       "tracks": [
-        { "name": "yeap1", "popularity": 45 },
-        { "name": "yeap2", "popularity": 45 }
+        { "name": "yeap1", "popularity": 45, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
+        { "name": "yeap2", "popularity": 45, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" }
       ]
     },
     {
       "id": "4NqS7DbPFYwZmniGHCPMpm",
       "tracks": [
-        { "name": "yeap1", "popularity": 73 },
-        { "name": "yeap2", "popularity": 73 }
-      ]
+        { "name": "yeap1", "popularity": 73, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
+        { "name": "yeap2", "popularity": 73, "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" }
+      ],
+      "preview_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
     }
   ],
   "total": 50,

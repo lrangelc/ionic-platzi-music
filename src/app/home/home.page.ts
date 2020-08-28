@@ -13,8 +13,11 @@ export class HomePage {
   artists: any[] = [];
   songs: any[] = [];
   albums: any[] = [];
-  song = { playing: false };
+  song = { playing: false, preview_url: '', name: '', popularity: 0 };
   slideOps = { initialSlid: 2, slidesPerView: 4, centeredSlides: true, speed: 400 };
+  currentSong: any = {};
+  newTime = {};
+  playing = false;
 
   constructor(private musicService: PlatziMusicService, private modalController: ModalController) {}
 
@@ -32,8 +35,6 @@ export class HomePage {
   async showSongs(artist) {
     this.musicService.getArtistTopTracks(artist.id).subscribe(async (data) => {
       const songs = data;
-      console.log('songs');
-      console.log(songs);
 
       const modal = await this.modalController.create({
         component: SongsModalPage,
@@ -44,6 +45,10 @@ export class HomePage {
       });
       modal.onDidDismiss().then((dataReturned) => {
         this.song = dataReturned.data;
+        if (this.playing) {
+          this.pause();
+        }
+        this.play();
       });
 
       modal.present();
@@ -62,10 +67,35 @@ export class HomePage {
   }
 
   play() {
+    this.currentSong = new Audio(this.song.preview_url);
+    this.currentSong.play();
+    this.currentSong.addEventListener('timeupdate', () => {
+      // this.newTime = ( 1 / this.currentSong.duration ) * this.currentSong.currentTime;
+      this.newTime = this.currentSong.currentTime / this.currentSong.duration;
+    });
     this.song.playing = true;
+    this.playing = true;
   }
 
   pause() {
+    this.currentSong.pause();
     this.song.playing = false;
+    this.playing = false;
+  }
+
+  parseTime(time = '0:00') {
+    if (time) {
+      const partTime = parseInt(time.toString().split('.')[0], 10);
+      let minutes = Math.floor(partTime / 60).toString();
+      if (minutes.length === 1) {
+        minutes = '0' + minutes;
+      }
+      let seconds = (partTime % 60).toString();
+      if (seconds.length === 1) {
+        seconds = '0' + minutes;
+      }
+      return minutes + ':' + seconds;
+    }
+    return null;
   }
 }

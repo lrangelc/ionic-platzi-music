@@ -24,20 +24,16 @@ const routes: Routes = [
   },
   {
     path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+    loadChildren: () => import('./register/register.module').then((m) => m.RegisterPageModule),
   },
   {
     path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule),
+    loadChildren: () => import('./menu/menu.module').then((m) => m.MenuPageModule),
     canActivate: [IntroGuard, LoginGuard],
   },
   {
     path: 'songs-modal',
-    loadChildren: () => import('./songs-modal/songs-modal.module').then( m => m.SongsModalPageModule)
-  },
-  {
-    path: 'settings',
-    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+    loadChildren: () => import('./songs-modal/songs-modal.module').then((m) => m.SongsModalPageModule),
   },
 ];
 

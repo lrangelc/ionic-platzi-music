@@ -5,5 +5,8 @@
 </ion-header>
 
 <ion-content>
-
+<ion-avatar (click)="takePhoto()">
+  <img [src]="userImage" alt="" *ngIf="!photo">
+  <img [src]="photo" alt="" *ngIf="photo">
+</ion-avatar>
 </ion-content>

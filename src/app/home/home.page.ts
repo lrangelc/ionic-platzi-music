@@ -13,9 +13,14 @@ export class HomePage {
   artists: any[] = [];
   songs: any[] = [];
   albums: any[] = [];
-  song = { playing: false, preview_url: '', name: '', popularity: 0 };
+  song: { preview_url: string; playing: boolean; name: string; popularity: number } = {
+    playing: false,
+    preview_url: '',
+    name: '',
+    popularity: 0,
+  };
   slideOps = { initialSlid: 2, slidesPerView: 4, centeredSlides: true, speed: 400 };
-  currentSong: any = {};
+  currentSong: HTMLAudioElement;
   newTime = {};
   playing = false;
 
@@ -83,7 +88,7 @@ export class HomePage {
     this.playing = false;
   }
 
-  parseTime(time = '0:00') {
+  parseTime(time = '00:00') {
     if (time) {
       const partTime = parseInt(time.toString().split('.')[0], 10);
       let minutes = Math.floor(partTime / 60).toString();

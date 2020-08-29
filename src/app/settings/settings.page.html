@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content text-center>
+  <div class="success-background">
+    <ion-avatar (click)="takePhoto()">
+      <img [src]="userImage" alt="" *ngIf="!photo" />
+      <img [src]="photo" alt="" *ngIf="photo" />
+    </ion-avatar>
+    <h1>Luis Rangel</h1>
+    <h2>luisrangelc@gmail.com</h2>
+    <ion-grid>
+      <ion-row align-items-center text-center class="row-header">
+        <ion-col>140</ion-col>
+        <ion-col>2k</ion-col>
+        <ion-col>500</ion-col>
+      </ion-row>
+      <ion-row align-items-center text-center>
+        <ion-col>Artistas</ion-col>
+        <ion-col>Followers</ion-col>
+        <ion-col>Songs</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

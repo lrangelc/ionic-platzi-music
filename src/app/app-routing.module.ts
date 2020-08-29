@@ -11,7 +11,7 @@ const routes: Routes = [
   // },
   {
     path: '',
-    redirectTo: 'menu/home',
+    redirectTo: 'menu',
     pathMatch: 'full',
   },
   {
@@ -24,16 +24,16 @@ const routes: Routes = [
   },
   {
     path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+    loadChildren: () => import('./register/register.module').then((m) => m.RegisterPageModule),
   },
   {
     path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule),
+    loadChildren: () => import('./menu/menu.module').then((m) => m.MenuPageModule),
     canActivate: [IntroGuard, LoginGuard],
   },
   {
     path: 'songs-modal',
-    loadChildren: () => import('./songs-modal/songs-modal.module').then( m => m.SongsModalPageModule)
+    loadChildren: () => import('./songs-modal/songs-modal.module').then((m) => m.SongsModalPageModule),
   },
 ];
 

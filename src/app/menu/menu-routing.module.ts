@@ -17,6 +17,11 @@ const routes: Routes = [
         path: 'settings',
         loadChildren: () => import('./../settings/settings.module').then((m) => m.SettingsPageModule),
       },
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full',
+      },
     ],
   },
 ];

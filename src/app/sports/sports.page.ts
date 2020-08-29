@@ -34,10 +34,12 @@ export class SportsPage {
         lat: position.coords.latitude,
         lng: position.coords.longitude,
       };
-      this.coordinates.push({
-        lat: position.coords.latitude,
-        lng: position.coords.longitude,
-      });
+      if (position) {
+        this.coordinates.push({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        });
+      }
     });
   }
 }
